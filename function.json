@@ -1,0 +1,15 @@
+{
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "IoTHubMessages",
+      "direction": "in",
+      "eventHubName": "samples-workitems",
+      "connection": "for-function-pg_events_IOTHUB",
+      "cardinality": "one",
+      "consumerGroup": "$Default",
+      "dataType": "string"
+    }
+  ],
+  "disabled": false
+}

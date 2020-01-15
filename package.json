@@ -1,0 +1,19 @@
+{
+  "name": "azure-iot-hub-function-postgresql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "azure-iot-device": "^1.12.1",
+    "azure-iot-device-mqtt": "^1.11.1",
+    "chalk": "^3.0.0",
+    "dotenv": "^8.2.0",
+    "pg": "^7.17.1"
+  }
+}
