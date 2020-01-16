@@ -1,7 +1,6 @@
-module.exports = async function (context, IoTHubMessages) {
+module.exports = async (context, IoTHubMessages) => {
   context.log(`JavaScript eventhub trigger function called for message array: ${IoTHubMessages.deviceId}`)
   const pg = require('pg')
-  require('dotenv').config()
 
   const config = {
     host: '',
@@ -14,7 +13,7 @@ module.exports = async function (context, IoTHubMessages) {
 
   const client = new pg.Client(config)
   client.connect(err => {
-    if (err) throw err;
+    if (err) throw err
     else {
       const query = 'insert into iotdata(deviceid, data) values(' + IoTHubMessages.deviceId + ',\'' + JSON.stringify(IoTHubMessages) + '\');'
       context.log(query)
