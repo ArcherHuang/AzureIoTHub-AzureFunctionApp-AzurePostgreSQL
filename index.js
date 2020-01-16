@@ -3,9 +3,9 @@ module.exports = async (context, IoTHubMessages) => {
   const pg = require('pg')
 
   const config = {
-    host: '',
-    user: '',
-    password: '',
+    host: process.env["PG_HOST"],
+    user: process.env["PG_USER"],
+    password: process.env["PG_PASSWORD"],
     database: 'iotdemo',
     port: 5432,
     ssl: true
